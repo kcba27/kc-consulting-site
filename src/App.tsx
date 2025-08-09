@@ -215,7 +215,7 @@ export default function App() {
 
             <Card className="rounded-2xl">
               <CardContent className="p-6">
-                <form action="https://formspree.io/f/xdknkybd" method="POST" className="space-y-4">
+                <form action="https://formspree.io/f/xyzplyrv" method="POST" className="space-y-4">
                   <Input name="name" placeholder="Your name" required />
                   <Input name="email" type="email" placeholder="Work email" required />
                   <Input name="company" placeholder="Company" />
