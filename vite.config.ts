@@ -1,7 +1,3 @@
-cat > vite.config.ts <<'EOF'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-cat > vite.config.ts <<'EOF'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
