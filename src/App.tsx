@@ -1,10 +1,10 @@
 
 import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Badge } from '@/components/ui/badge'
+import { Card, CardContent } from './components/ui/card'
+import { Button } from './components/ui/button'
+import { Input } from './components/ui/input'
+import { Textarea } from './components/ui/textarea'
+import { Badge } from './components/ui/badge'
 import { Check, Sparkles, Mail, Linkedin, ArrowRight, BarChart3, Network, Database, Workflow, Wand2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
