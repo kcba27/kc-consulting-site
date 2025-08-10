@@ -138,29 +138,58 @@ export default function App() {
           <h2 className="text-3xl md:text-4xl font-semibold">Selected work</h2>
           <p className="mt-3 text-slate-600">A taste of recent projects. Client names omitted; details available in a private walkthrough.</p>
           <div className="mt-8 grid md:grid-cols-3 gap-6">
-            {[{
-              title: 'Executive Insights Dashboard',
-              blurb: 'Designed a unified KPI dashboard for leadership, combining financial, operational, and customer metrics.',
-              tags: ['Power BI','Azure SQL','Data Modeling'],
-            },{
-              title: 'Self-Service Analytics Enablement',
-              blurb: 'Implemented a governed semantic layer and trained teams to build their own reports with confidence.',
-              tags: ['Looker','BigQuery','Governance'],
-            },{
-              title: 'GenAI-Driven KPI Summaries',
-              blurb: 'Built a prototype that generates plain-language performance summaries directly from curated metrics.',
-              tags: ['Databricks','dbt','GenAI'],
-            }].map((w, i) => (
-              <Card key={i} className="rounded-2xl">
-                <CardContent className="p-6">
-                  <div className="font-medium">{w.title}</div>
-                  <p className="mt-2 text-sm text-slate-600">{w.blurb}</p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {w.tags.map(t => <Badge key={t} className="rounded-xl">{t}</Badge>)}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {[
+  {
+    title: 'Regulatory Reporting Optimisation',
+    blurb: 'Developed a Qlik-based reporting solution to enhance visibility and tracking of regulatory claims. Optimised SQL queries for faster processing, improving decision-making and operational efficiency.',
+    tags: ['Qlik', 'SQL', 'Data Modelling']
+  },
+  {
+    title: 'People Data Model & Governance',
+    blurb: 'Profiled and classified critical data elements from multiple source systems to improve governance and quality. Implemented metadata lineage for future integration into a data catalog.',
+    tags: ['Data Governance', 'Metadata Profiling', 'Azure']
+  },
+  {
+    title: 'Engineering Project Oversight Dashboard',
+    blurb: 'Designed Azure SQL + Power BI solution to track contractor and supplier performance for large-scale engineering projects, enabling better project management and operational insight.',
+    tags: ['Power BI', 'Azure SQL', 'DAX']
+  },
+  {
+    title: 'Enterprise Data Governance & Validation',
+    blurb: 'Delivered a Power BI-based Validation & Lineage report with SQL/DAX data integrity checks, improving stakeholder trust and issue debugging.',
+    tags: ['Power BI', 'SQL', 'DAX']
+  },
+  {
+    title: 'ERP to Self-Serve BI Transformation',
+    blurb: 'Migrated complex ERP reporting to Power BI. Built HR compliance, procurement, and contract management reports, improving contract processes by 25%.',
+    tags: ['Power BI', 'ERP', 'Process Improvement']
+  },
+  {
+    title: 'B2B Marketing Analytics',
+    blurb: 'Created targeted cohort analysis dashboards in Power BI, increasing product sign-ups and driving significant quarterly sales growth.',
+    tags: ['Power BI', 'Azure Synapse', 'Data Analysis']
+  },
+  {
+    title: 'Process Intelligence Pipeline',
+    blurb: 'Designed ETL architecture to feed process mining tools, uncovering inefficiencies and enabling process improvements in a financial institution.',
+    tags: ['ETL', 'Process Mining', 'SQL']
+  },
+  {
+    title: 'Healthcare Engagement Analytics',
+    blurb: 'Built Power BI dashboards to track public health program engagement, helping improve outreach and impact.',
+    tags: ['Power BI', 'Healthcare Analytics', 'Data Visualization']
+  }
+].map((w, i) => (
+  <Card key={i} className="rounded-2xl">
+    <CardContent className="p-6">
+      <div className="font-medium">{w.title}</div>
+      <p className="mt-2 text-sm text-slate-600">{w.blurb}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {w.tags.map(t => <Badge key={t} className="rounded-xl">{t}</Badge>)}
+      </div>
+    </CardContent>
+  </Card>
+))}
           </div>
         </div>
       </section>
