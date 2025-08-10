@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Card, CardContent } from './components/ui/card'
 import { Button } from './components/ui/button'
@@ -12,26 +11,31 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Nav */}
-      <nav className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
-        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-2xl bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-rose-500" />
-            <span className="font-semibold tracking-tight">KC Consulting</span>
-          </div>
-          <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#services" className="hover:text-indigo-600">Services</a>
-            <a href="#work" className="hover:text-indigo-600">Work</a>
-            <a href="#about" className="hover:text-indigo-600">About</a>
-            <a href="#contact" className="hover:text-indigo-600">Contact</a>
-            <a href="https://www.linkedin.com/in/kcba27/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
-              <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
-            <a href="#contact">
-              <Button className="rounded-2xl">Book a chat</Button>
-            </a>
-          </div>
-        </div>
-      </nav>
+<nav className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200">
+  <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+    <div className="flex items-center gap-2">
+      {/* Logo */}
+      <img 
+        src="./assets/kc_consulting_logo.png" 
+        alt="KC Consulting Logo" 
+        className="h-9 w-9 object-contain rounded-lg"
+      />
+      <span className="font-semibold tracking-tight">KC Consulting</span>
+    </div>
+    <div className="hidden md:flex items-center gap-6 text-sm">
+      <a href="#services" className="hover:text-indigo-600">Services</a>
+      <a href="#work" className="hover:text-indigo-600">Work</a>
+      <a href="#about" className="hover:text-indigo-600">About</a>
+      <a href="#contact" className="hover:text-indigo-600">Contact</a>
+      <a href="https://www.linkedin.com/in/kcba27/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
+        <Linkedin className="h-4 w-4" /> LinkedIn
+      </a>
+      <a href="#contact">
+        <Button className="rounded-2xl">Book a chat</Button>
+      </a>
+    </div>
+  </div>
+</nav>
 
       {/* Hero */}
       <header className="relative overflow-hidden">
@@ -46,7 +50,7 @@ export default function App() {
               I help business leaders and data teams turn messy data into simple, reliable decision-making. Power BI, Looker, BigQuery, Databricks, Azure — plus automation with GenAI when it makes sense.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#contact"><Button className="rounded-2xl" >Get a proposal <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
+              <a href="#contact"><Button className="rounded-2xl">Get a proposal <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
               <a href="#work" className="inline-flex items-center px-4 py-2 rounded-2xl border border-slate-300 hover:bg-slate-50">See work samples</a>
             </div>
             <div className="mt-6 flex flex-wrap gap-2 text-sm text-slate-600">
@@ -139,57 +143,57 @@ export default function App() {
           <p className="mt-3 text-slate-600">A taste of recent projects. Client names omitted; details available in a private walkthrough.</p>
           <div className="mt-8 grid md:grid-cols-3 gap-6">
             {[
-  {
-    title: 'Regulatory Reporting Optimisation',
-    blurb: 'Developed a Qlik-based reporting solution to enhance visibility and tracking of regulatory claims. Optimised SQL queries for faster processing, improving decision-making and operational efficiency.',
-    tags: ['Qlik', 'SQL', 'Data Modelling']
-  },
-  {
-    title: 'People Data Model & Governance',
-    blurb: 'Profiled and classified critical data elements from multiple source systems to improve governance and quality. Implemented metadata lineage for future integration into a data catalog.',
-    tags: ['Data Governance', 'Metadata Profiling', 'Azure']
-  },
-  {
-    title: 'Engineering Project Oversight Dashboard',
-    blurb: 'Designed Azure SQL + Power BI solution to track contractor and supplier performance for large-scale engineering projects, enabling better project management and operational insight.',
-    tags: ['Power BI', 'Azure SQL', 'DAX']
-  },
-  {
-    title: 'Enterprise Data Governance & Validation',
-    blurb: 'Delivered a Power BI-based Validation & Lineage report with SQL/DAX data integrity checks, improving stakeholder trust and issue debugging.',
-    tags: ['Power BI', 'SQL', 'DAX']
-  },
-  {
-    title: 'ERP to Self-Serve BI Transformation',
-    blurb: 'Migrated complex ERP reporting to Power BI. Built HR compliance, procurement, and contract management reports, improving contract processes by 25%.',
-    tags: ['Power BI', 'ERP', 'Process Improvement']
-  },
-  {
-    title: 'B2B Marketing Analytics',
-    blurb: 'Created targeted cohort analysis dashboards in Power BI, increasing product sign-ups and driving significant quarterly sales growth.',
-    tags: ['Power BI', 'Azure Synapse', 'Data Analysis']
-  },
-  {
-    title: 'Process Intelligence Pipeline',
-    blurb: 'Designed ETL architecture to feed process mining tools, uncovering inefficiencies and enabling process improvements in a financial institution.',
-    tags: ['ETL', 'Process Mining', 'SQL']
-  },
-  {
-    title: 'Healthcare Engagement Analytics',
-    blurb: 'Built Power BI dashboards to track public health program engagement, helping improve outreach and impact.',
-    tags: ['Power BI', 'Healthcare Analytics', 'Data Visualization']
-  }
-].map((w, i) => (
-  <Card key={i} className="rounded-2xl">
-    <CardContent className="p-6">
-      <div className="font-medium">{w.title}</div>
-      <p className="mt-2 text-sm text-slate-600">{w.blurb}</p>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {w.tags.map(t => <Badge key={t} className="rounded-xl">{t}</Badge>)}
-      </div>
-    </CardContent>
-  </Card>
-))}
+              {
+                title: 'Regulatory Reporting Optimisation',
+                blurb: 'Developed a Qlik-based reporting solution to enhance visibility and tracking of regulatory claims. Optimised SQL queries for faster processing, improving decision-making and operational efficiency.',
+                tags: ['Qlik', 'SQL', 'Data Modelling']
+              },
+              {
+                title: 'People Data Model & Governance',
+                blurb: 'Profiled and classified critical data elements from multiple source systems to improve governance and quality. Implemented metadata lineage for future integration into a data catalog.',
+                tags: ['Data Governance', 'Metadata Profiling', 'Azure']
+              },
+              {
+                title: 'Engineering Project Oversight Dashboard',
+                blurb: 'Designed Azure SQL + Power BI solution to track contractor and supplier performance for large-scale engineering projects, enabling better project management and operational insight.',
+                tags: ['Power BI', 'Azure SQL', 'DAX']
+              },
+              {
+                title: 'Enterprise Data Governance & Validation',
+                blurb: 'Delivered a Power BI-based Validation & Lineage report with SQL/DAX data integrity checks, improving stakeholder trust and issue debugging.',
+                tags: ['Power BI', 'SQL', 'DAX']
+              },
+              {
+                title: 'ERP to Self-Serve BI Transformation',
+                blurb: 'Migrated complex ERP reporting to Power BI. Built HR compliance, procurement, and contract management reports, improving contract processes by 25%.',
+                tags: ['Power BI', 'ERP', 'Process Improvement']
+              },
+              {
+                title: 'B2B Marketing Analytics',
+                blurb: 'Created targeted cohort analysis dashboards in Power BI, increasing product sign-ups and driving significant quarterly sales growth.',
+                tags: ['Power BI', 'Azure Synapse', 'Data Analysis']
+              },
+              {
+                title: 'Process Intelligence Pipeline',
+                blurb: 'Designed ETL architecture to feed process mining tools, uncovering inefficiencies and enabling process improvements in a financial institution.',
+                tags: ['ETL', 'Process Mining', 'SQL']
+              },
+              {
+                title: 'Healthcare Engagement Analytics',
+                blurb: 'Built Power BI dashboards to track public health program engagement, helping improve outreach and impact.',
+                tags: ['Power BI', 'Healthcare Analytics', 'Data Visualization']
+              }
+            ].map((w, i) => (
+              <Card key={i} className="rounded-2xl">
+                <CardContent className="p-6">
+                  <div className="font-medium">{w.title}</div>
+                  <p className="mt-2 text-sm text-slate-600">{w.blurb}</p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {w.tags.map(t => <Badge key={t} className="rounded-xl">{t}</Badge>)}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -222,6 +226,52 @@ export default function App() {
                 <div className="flex gap-2"><Check className="h-5 w-5 text-emerald-600 mt-0.5"/> 20–60% faster reporting cycles</div>
                 <div className="flex gap-2"><Check className="h-5 w-5 text-emerald-600 mt-0.5"/> Fewer reconciliation fights between teams</div>
                 <div className="flex gap-2"><Check className="h-5 w-5 text-emerald-600 mt-0.5"/> Stakeholders who actually trust the numbers</div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Technical expertise card */}
+          <Card className="rounded-2xl">
+            <CardContent className="p-6">
+              <div className="text-sm text-slate-500">Technical expertise</div>
+              <div className="mt-3 grid sm:grid-cols-2 gap-3 text-sm">
+                <div>
+                  <div className="font-medium mb-1">Analytics & Engineering</div>
+                  <ul className="list-disc list-inside space-y-1 text-slate-700">
+                    <li>SQL (PLSQL, T-SQL, Azure SQL, BigQuery)</li>
+                    <li>Python (Pandas)</li>
+                    <li>ETL: Azure Data Factory, Synapse, Microsoft Fabric</li>
+                    <li>Metadata & lineage, data profiling/classification</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium mb-1">Business Intelligence</div>
+                  <ul className="list-disc list-inside space-y-1 text-slate-700">
+                    <li>Power BI (modeling, DAX, performance tuning)</li>
+                    <li>Tableau, Qlik</li>
+                    <li>Golden datasets & semantic layers</li>
+                    <li>Data quality validation frameworks</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium mb-1">Architecture & Modelling</div>
+                  <ul className="list-disc list-inside space-y-1 text-slate-700">
+                    <li>Star schemas (Kimball), Data Vault</li>
+                    <li>Azure Data Lake Storage</li>
+                    <li>ERP → self-serve BI transformations</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium mb-1">Collaboration & DevOps</div>
+                  <ul className="list-disc list-inside space-y-1 text-slate-700">
+                    <li>Azure DevOps, Git</li>
+                    <li>Confluence, SharePoint, JIRA</li>
+                    <li>Agile delivery, stakeholder workshops</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-4 text-xs text-slate-500">
+                Certifications: DA-100 • AZ-900 • AI-900 • DP-900 • SAS La Trobe Specialization
               </div>
             </CardContent>
           </Card>
@@ -276,4 +326,4 @@ export default function App() {
       </footer>
     </div>
   )
-}
+}// redeploy Mon 11 Aug 2025 01:07:19 AEST
